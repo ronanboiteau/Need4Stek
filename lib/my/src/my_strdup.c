@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed Oct  7 08:50:44 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:18:49 2016 Ronan Boiteau
+** Last update Wed May  4 17:57:42 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -21,7 +21,7 @@ char		*my_strdup(const char *src)
     return (NULL);
   idx = 0;
   lenght = my_strlen(src);
-  if ((new_str = malloc(sizeof(char) * lenght + 1)) == NULL)
+  if ((new_str = malloc(sizeof(char) * (lenght + 1))) == NULL)
     my_exit(EXIT_FAILURE, "ERROR: Out of memory! malloc() failed\n");
   while (src[idx])
     {
