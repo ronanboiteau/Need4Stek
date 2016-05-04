@@ -5,10 +5,10 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Wed May  4 16:15:12 2016 Ronan Boiteau
-## Last update Wed May  4 16:15:51 2016 Ronan Boiteau
+## Last update Wed May  4 16:39:40 2016 Ronan Boiteau
 ##
 
-NAME	 = n4s
+NAME	 = ia
 
 IDIR	 = include/
 
