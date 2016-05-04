@@ -5,13 +5,13 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Fri Dec 18 02:12:36 2015 Ronan Boiteau
-** Last update Tue Apr 19 16:40:24 2016 Ronan Boiteau
+** Last update Thu May  5 01:32:54 2016 Ronan Boiteau
 */
 
 #include <limits.h>
 #include "my.h"
 
-static int	_skip_letters(const char *str)
+static int	skip_letters(const char *str)
 {
   int		idx;
 
@@ -25,7 +25,7 @@ static int	_skip_letters(const char *str)
   return (idx);
 }
 
-static int	_set_reverser(const char *str, int *idx)
+static int	set_reverser(const char *str, int *idx)
 {
   if (str[*idx] == '-')
     {
@@ -43,8 +43,8 @@ int		my_atoi(const char *str)
   int		lenght;
 
   result = 0;
-  idx = _skip_letters(str);
-  reverser = _set_reverser(str, &idx);
+  idx = skip_letters(str);
+  reverser = set_reverser(str, &idx);
   lenght = idx;
   while (str[lenght] >= '0' && str[lenght] <= '9')
     lenght += 1;

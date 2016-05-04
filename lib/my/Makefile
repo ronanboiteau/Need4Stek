@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Tue Nov 10 15:47:58 2015 Ronan Boiteau
-## Last update Sun Jan 31 17:55:04 2016 Ronan Boiteau
+## Last update Thu May  5 00:34:56 2016 Ronan Boiteau
 ##
 
 IDIR	 = include/
@@ -36,6 +36,7 @@ SRCS	 = $(SDIR)env/my_envcpy.c			\
 	  $(SDIR)env/my_unsetenv.c			\
 	  $(SDIR)get_next_line.c			\
 	  $(SDIR)match.c				\
+	  $(SDIR)my_atof.c				\
 	  $(SDIR)my_atoi.c				\
 	  $(SDIR)my_char_is/my_char_isalpha.c		\
 	  $(SDIR)my_char_is/my_char_islower.c		\

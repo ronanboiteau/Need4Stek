@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Thu Oct  8 10:33:26 2015 Ronan Boiteau
-** Last update Sun Jan 31 17:54:49 2016 Ronan Boiteau
+** Last update Thu May  5 01:34:08 2016 Ronan Boiteau
 */
 
 #ifndef MY_H_
@@ -16,6 +16,7 @@
 
 char	*get_next_line(int const fd);
 int	match(char *str1, char *str2);
+float	my_atof(const char *str);
 int	my_atoi(const char *str);
 int	my_char_isalpha(const char letter);
 int	my_char_islower(const char letter);
