@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Tue Nov 10 15:47:58 2015 Ronan Boiteau
-## Last update Thu May  5 00:34:56 2016 Ronan Boiteau
+## Last update Sun Feb 21 18:36:37 2016 Ronan Boiteau
 ##
 
 IDIR	 = include/
@@ -29,14 +29,8 @@ RM	 = rm -f
 NAME	 = ../libmy.a
 
 SDIR	 = src/
-SRCS	 = $(SDIR)env/my_envcpy.c			\
-	  $(SDIR)env/my_getenv.c			\
-	  $(SDIR)env/my_printenv.c			\
-	  $(SDIR)env/my_setenv.c			\
-	  $(SDIR)env/my_unsetenv.c			\
-	  $(SDIR)get_next_line.c			\
+SRCS	 = $(SDIR)get_next_line.c			\
 	  $(SDIR)match.c				\
-	  $(SDIR)my_atof.c				\
 	  $(SDIR)my_atoi.c				\
 	  $(SDIR)my_char_is/my_char_isalpha.c		\
 	  $(SDIR)my_char_is/my_char_islower.c		\
@@ -44,11 +38,9 @@ SRCS	 = $(SDIR)env/my_envcpy.c			\
 	  $(SDIR)my_char_is/my_char_isprintable.c	\
 	  $(SDIR)my_char_is/my_char_isupper.c		\
 	  $(SDIR)my_cmp.c				\
-	  $(SDIR)my_epur_str.c				\
 	  $(SDIR)my_find_prime_sup.c			\
 	  $(SDIR)my_free_2d_tab.c			\
 	  $(SDIR)my_is_prime.c				\
-	  $(SDIR)my_itoa.c				\
 	  $(SDIR)my_max_int_tab.c			\
 	  $(SDIR)my_min_int_tab.c			\
 	  $(SDIR)my_printf/compare_char.c		\
@@ -76,17 +68,14 @@ SRCS	 = $(SDIR)env/my_envcpy.c			\
 	  $(SDIR)my_str_is/my_str_isupper.c		\
 	  $(SDIR)my_strcapitalize.c			\
 	  $(SDIR)my_strcmp.c				\
-	  $(SDIR)my_strdup.c				\
 	  $(SDIR)my_strlen.c				\
 	  $(SDIR)my_strlowcase.c			\
 	  $(SDIR)my_strncat.c				\
 	  $(SDIR)my_strncmp.c				\
 	  $(SDIR)my_strncpy.c				\
 	  $(SDIR)my_strstr.c				\
-	  $(SDIR)my_str_to_wordtab.c			\
 	  $(SDIR)my_strupcase.c				\
 	  $(SDIR)my_swap.c				\
-	  $(SDIR)my_uitoa.c				\
 	  $(SDIR)nmatch.c
 
 OBJS	 = $(SRCS:.c=.o)

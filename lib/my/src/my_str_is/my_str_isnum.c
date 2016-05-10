@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 18:01:08 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:56 2016 Ronan Boiteau
+** Last update Fri Jan 29 21:14:49 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		my_str_isnum(const char *str)
 {

@@ -5,12 +5,12 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Mon Dec 21 03:02:16 2015 Ronan Boiteau
-** Last update Tue Apr  5 15:55:10 2016 Ronan Boiteau
+** Last update Sun Jan 17 23:22:51 2016 Ronan Boiteau
 */
 
+#include "get_next_line.h"
 #include <stdlib.h>
 #include <unistd.h>
-#include "get_next_line.h"
 
 static char	*my_strdup(const char *src)
 {
@@ -23,12 +23,12 @@ static char	*my_strdup(const char *src)
   if ((new_str = malloc(sizeof(char) * idx + 1)) == NULL)
     return (NULL);
   idx = 0;
-  while (src[idx] != '\0')
+  while (src[idx] != C_NUL)
     {
       new_str[idx] = src[idx];
       idx += 1;
     }
-  new_str[idx] = '\0';
+  new_str[idx] = C_NUL;
   return (new_str);
 }
 
@@ -52,7 +52,7 @@ static char	*_str_cpy_cat(char *dest,
 	  idx += 1;
 	  idx_src += 1;
 	}
-      dest[idx] = '\0';
+      dest[idx] = C_NUL;
       return (dest);
     }
   while (src[idx] && idx < nbr)
@@ -60,7 +60,7 @@ static char	*_str_cpy_cat(char *dest,
       dest[idx] = src[idx];
       idx += 1;
     }
-  dest[idx] = '\0';
+  dest[idx] = C_NUL;
   return (dest);
 }
 
@@ -77,7 +77,7 @@ static char	*_auto_alloc(char *ptr, size_t mem)
       if ((new_ptr = malloc(sizeof(char) * mem)) == NULL)
 	return (NULL);
       if (mem > 0)
-	new_ptr[0] = '\0';
+	new_ptr[0] = C_NUL;
       return (new_ptr);
     }
   if ((new_ptr = malloc(sizeof(char) * (ptr_len + 1 + mem))) == NULL)
@@ -100,12 +100,12 @@ static char	*_get_new_buffer(char *buf,
       tmp = 0;
       while (buf_full != NULL && buf_full[tmp] && (tmp = tmp + 1))
       	{
-      	  if (buf_full[tmp - 1] == '\n')
+      	  if (buf_full[tmp - 1] == C_EOL)
 	    eols += 1;
       	}
       if (eols != 0)
 	return (buf_full);
-      if ((tmp = read(fd, buf, READ_SIZE)) <= 0 || (buf[tmp] = '\0')
+      if ((tmp = read(fd, buf, READ_SIZE)) <= 0 || (buf[tmp] = C_NUL)
 	  || (buf_full = _auto_alloc(buf_full, READ_SIZE + 1)) == NULL)
       	{
 	  if (buf_full != NULL && buf_full[0] != '\0')
@@ -132,17 +132,17 @@ char		*get_next_line(const int fd)
     return (NULL);
   free(buf);
   idx = 0;
-  while (buffer[idx_buf + idx] && buffer[idx_buf + idx] != '\n')
+  while (buffer[idx_buf + idx] && buffer[idx_buf + idx] != C_EOL)
     idx += 1;
-  while (buffer[idx_buf + idx] && buffer[idx_buf + idx] != '\n')
+  while (buffer[idx_buf + idx] && buffer[idx_buf + idx] != C_EOL)
     idx += 1;
   buf = buffer;
   if ((line = _auto_alloc((line = NULL), idx + 2)) == NULL ||
-      (buffer = buf[idx_buf + idx] == '\0' ? my_strdup("\0")
+      (buffer = buf[idx_buf + idx] == C_NUL ? my_strdup(NUL)
        : my_strdup(buf + idx_buf + idx + 1)) == NULL)
     return (NULL);
   line = _str_cpy_cat(line, buf + idx_buf, idx + 1, FALSE);
-  line[idx] = '\0';
+  line[idx] = C_NUL;
   free(buf);
   return (line);
 }

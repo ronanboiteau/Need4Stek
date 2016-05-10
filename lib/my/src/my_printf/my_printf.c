@@ -5,13 +5,13 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sat Nov 14 08:17:53 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:12 2016 Ronan Boiteau
+** Last update Sun Feb 21 18:37:10 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
+#include <stdlib.h>
 
 static t_uint	_if_not_flag(int fd, t_uint printed, t_cstring *str)
 {
@@ -109,28 +109,4 @@ int		my_printf(const char *format, ...)
     }
   va_end(ap);
   return (printed);
-}
-
-void		my_exit(int exit_code, const char *format, ...)
-{
-  va_list	ap;
-  t_cstring	str;
-  t_flag	flags[FLAGS_NBR];
-
-  _init_structures(flags, &str, format);
-  va_start(ap, format);
-  if (str.str == NULL)
-    exit(exit_code);
-  while (str.str[str.idx] != '\0')
-    {
-      if (str.str[str.idx] != '%')
-	my_putchar_fd(STDERR, str.str[str.idx]);
-      else if (str.str[str.idx] == '%' && str.str[str.idx + 1] == '\0')
-	exit(exit_code);
-      else if (str.str[str.idx] == '%' && str.str[str.idx + 1])
-	_flags_handler(STDERR, flags, &str, ap);
-      str.idx += 1;
-    }
-  va_end(ap);
-  exit(exit_code);
 }

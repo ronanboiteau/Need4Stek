@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct  4 00:18:09 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:18:18 2016 Ronan Boiteau
+** Last update Mon Jan 18 20:59:30 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		match(char *str1, char *str2)
 {

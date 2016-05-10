@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Mon Oct  5 09:38:55 2015 Ronan Boiteau
-** Last update Thu Apr  7 15:21:14 2016 Ronan Boiteau
+** Last update Mon Jan 18 21:03:15 2016 Ronan Boiteau
 */
 
 #include "my.h"
@@ -20,6 +20,6 @@ char		*my_strncpy(char *dest, const char *src, t_uint nbr)
       dest[idx] = src[idx];
       idx += 1;
     }
-  dest[idx] = '\0';
+  dest[idx] = C_NUL;
   return (dest);
 }

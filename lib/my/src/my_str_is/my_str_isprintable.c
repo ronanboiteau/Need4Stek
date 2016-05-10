@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 18:17:26 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:58 2016 Ronan Boiteau
+** Last update Sun Jan 31 01:27:31 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		my_str_isprintable(const char *str)
 {

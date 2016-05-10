@@ -5,13 +5,13 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sat Nov  7 04:20:05 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:07 2016 Ronan Boiteau
+** Last update Mon Jan 18 17:29:36 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
+#include <stdlib.h>
 
 t_uint		_print_str(int fd, t_uint printed, va_list ap)
 {

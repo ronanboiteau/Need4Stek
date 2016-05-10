@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 17:37:05 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:51 2016 Ronan Boiteau
+** Last update Mon Jan 18 17:30:39 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		my_str_isalpha(const char *str)
 {

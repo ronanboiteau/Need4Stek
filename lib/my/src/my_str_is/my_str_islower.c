@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 18:05:52 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:22:53 2016 Ronan Boiteau
+** Last update Mon Jan 18 17:30:42 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		my_str_islower(const char *str)
 {

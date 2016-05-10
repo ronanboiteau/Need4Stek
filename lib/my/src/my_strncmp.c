@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Tue Oct  6 14:18:14 2015 Ronan Boiteau
-** Last update Tue Apr 12 23:19:00 2016 Ronan Boiteau
+** Last update Mon Jan 18 21:03:07 2016 Ronan Boiteau
 */
 
-#include <stdlib.h>
 #include "my.h"
+#include <stdlib.h>
 
 int		my_strncmp(const char *str1, const char *str2, t_uint nbr)
 {
@@ -18,7 +18,7 @@ int		my_strncmp(const char *str1, const char *str2, t_uint nbr)
   if (str1 == NULL || str2 == NULL)
     return (-1);
   idx = 0;
-  while (str1[idx] && str2[idx] && idx < nbr)
+  while (str1[idx] != C_NUL && str2[idx] != C_NUL && idx < nbr)
     {
       if (str1[idx] != str2[idx])
 	return (str1[idx] - str2[idx]);
