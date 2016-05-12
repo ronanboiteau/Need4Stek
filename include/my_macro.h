@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Tue Oct 27 14:04:25 2015 Ronan Boiteau
-** Last update Thu Apr  7 15:16:55 2016 Ronan Boiteau
+** Last update Thu Feb  4 17:19:22 2016 Ronan Boiteau
 */
 
 #ifndef MY_MACRO_H_
@@ -21,5 +21,14 @@
 # define STDIN	(0)
 # define STDOUT	(1)
 # define STDERR	(2)
+
+# define C_NUL	'\0'
+# define EOT	4
+# define C_TAB	'\t'
+# define C_EOL	'\n'
+
+# define NUL	"\0"
+# define TAB	"\t"
+# define EOL	"\n"
 
 #endif /* !MY_MACRO_H_ */
