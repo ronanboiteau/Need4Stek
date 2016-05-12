@@ -10,7 +10,7 @@ STUDENT_NAME="./ia"
 BUFF_NAME="./n4s_buffer"
 N4S_NAME="./n4s"
 
-FIFONAME=".fifo"
+FIFONAME=".fifo_n4s"
 trap "rm -f $FIFONAME" EXIT
 
 if [ ! -p $FIFONAME ]; then
@@ -23,4 +23,4 @@ if [ ! -x $STUDENT_NAME ] || [ ! -x $BUFF_NAME ] || [ ! -x $N4S_NAME ]; then
   exit 1
 fi
 
-"./$STUDENT_NAME" < $FIFONAME |  "./$BUFF_NAME" | "./$N4S_NAME" |  "./$BUFF_NAME" > $FIFONAME 2> /dev/null
+"./$STUDENT_NAME" < $FIFONAME |  "./$BUFF_NAME" | "./$N4S_NAME" 2> /dev/null |  "./$BUFF_NAME" > $FIFONAME

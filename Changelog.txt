@@ -1,0 +1,27 @@
+=== 11/05/2016
++ Fixed the color panel because of a graphic glitch that distorts LIDAR values.
+
+=== 08/05/2016
++ Fixed a bug when a first attempt to start simulation failed, all next attempts would lead to a misc error.
++ Fixed a checkpoint bug that would take the last hit as a Track cleared timer value instead of only taking the first
++ Added timer support for Mac OS (props to dridi_e) . Project tested on 10.11.1 El Capitan. (Ask for download, no support provided)
++ New scenes with new tracks (including a bill-filled track...). (props to kettan_s)
+
+=== 05/05/2016
++ Added a Changelog.txt to keep track of updates.
++ Updated the .ttt files in scene/ to be n4s-compliant with the new sensors CP system.
++ New Checkpoints in the track_1.ttt scene.
++ Sensors handlers can now correctly notify when checkpoints/laps or tracks are cleared.
++ n4s now synchronises with V-REP only when necessary
++ Added "GET_CAR_SPEED_MAX" and "GET_CAR_SPEED_MIN" constant getters callable outside simulations
++ Added "GET_INFO_SIMTIME" command to get simulation running time.
++ ./pipes.sh now correctly silences the prompt
++ More detailed error codes for sensor loading
++ Retrieving data on sensors doesn't contain any dynamic allocations anymore, since
+this routine is called a big amount of times through the simulation.
++ Possibility to change the Unique/Several laps mode within the V-REP map conception.
++ Added the MOULINETTE version to the compile options (unavailable to students)
+
+Notes:
+- Some return code values are not mentionned in the subject. You don't have to
+bother with them in the student version of n4s.
