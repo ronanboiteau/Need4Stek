@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Thu Oct  8 10:33:26 2015 Ronan Boiteau
-** Last update Sun Feb 21 18:37:15 2016 Ronan Boiteau
+** Last update Tue May 24 10:49:22 2016 Ronan Boiteau
 */
 
 #ifndef MY_H_
@@ -16,6 +16,7 @@
 
 char	*get_next_line(int const fd);
 int	match(char *str1, char *str2);
+float	my_atof(const char *str);
 int	my_atoi(const char *str);
 int	my_char_isalpha(const char letter);
 int	my_char_islower(const char letter);
@@ -36,6 +37,7 @@ void	my_sort_int_tab(int *tab, int size);
 int	my_square_root(const int nbr);
 char	*my_strcapitalize(char *str);
 int	my_strcmp(const char *str1, const char *str2);
+char	*my_strdup(const char *src);
 int	my_str_isalpha(const char *str);
 int	my_str_islower(const char *str);
 int	my_str_isnum(const char *str);

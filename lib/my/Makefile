@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Tue Nov 10 15:47:58 2015 Ronan Boiteau
-## Last update Sun Feb 21 18:36:37 2016 Ronan Boiteau
+## Last update Tue May 24 10:48:51 2016 Ronan Boiteau
 ##
 
 IDIR	 = include/
@@ -31,6 +31,7 @@ NAME	 = ../libmy.a
 SDIR	 = src/
 SRCS	 = $(SDIR)get_next_line.c			\
 	  $(SDIR)match.c				\
+	  $(SDIR)my_atof.c				\
 	  $(SDIR)my_atoi.c				\
 	  $(SDIR)my_char_is/my_char_isalpha.c		\
 	  $(SDIR)my_char_is/my_char_islower.c		\
@@ -68,6 +69,7 @@ SRCS	 = $(SDIR)get_next_line.c			\
 	  $(SDIR)my_str_is/my_str_isupper.c		\
 	  $(SDIR)my_strcapitalize.c			\
 	  $(SDIR)my_strcmp.c				\
+	  $(SDIR)my_strdup.c				\
 	  $(SDIR)my_strlen.c				\
 	  $(SDIR)my_strlowcase.c			\
 	  $(SDIR)my_strncat.c				\

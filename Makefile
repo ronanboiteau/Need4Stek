@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Wed May  4 16:15:12 2016 Ronan Boiteau
-## Last update Thu May  5 01:36:02 2016 Ronan Boiteau
+## Last update Tue May 24 11:48:34 2016 Ronan Boiteau
 ##
 
 NAME	 = ia
@@ -20,10 +20,12 @@ CC	 = gcc
 CFLAGS	+= -I $(IDIR)
 CFLAGS	+= -Wall -Wextra
 CFLAGS	+= -Wpedantic -Wno-long-long
-CFLAGS	+= -Werror
+#CFLAGS	+= -Werror
+CFLAGS	+= -g3
 
 SDIR	 = src/
-SRCS	 = $(SDIR)get_info_lidar.c				\
+SRCS	 = $(SDIR)epur_raw_info.c				\
+	   $(SDIR)get_info_lidar.c				\
 	   $(SDIR)main.c
 
 OBJS	 = $(SRCS:.c=.o)
