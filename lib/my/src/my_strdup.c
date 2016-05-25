@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed Oct  7 08:50:44 2015 Ronan Boiteau
-** Last update Tue May 24 10:28:45 2016 Ronan Boiteau
+** Last update Tue May 24 19:34:55 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -13,16 +13,12 @@
 
 char		*my_strdup(const char *src)
 {
-  int		lenght;
   int		idx;
   char		*new_str;
 
-  if (src == NULL)
+  if (!src || !(new_str = malloc(sizeof(char) * (my_strlen(src) + 1))))
     return (NULL);
   idx = 0;
-  lenght = my_strlen(src);
-  if (!(new_str = malloc(sizeof(char) * (lenght + 1))))
-    return (NULL);
   while (src[idx])
     {
       new_str[idx] = src[idx];

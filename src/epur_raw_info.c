@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Tue May 24 10:51:11 2016 Ronan Boiteau
-** Last update Tue May 24 15:46:47 2016 Ronan Boiteau
+** Last update Tue May 24 19:37:33 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -40,8 +40,6 @@ char		*epur_raw_info(char *raw)
   int		separator;
 
   tmp = raw;
-  if (!(clean = malloc(sizeof(char) * (my_strlen(raw) + 1))))
-    return (NULL);
   separator = 0;
   while (*tmp && separator < 3)
     {

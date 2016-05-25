@@ -23,4 +23,4 @@ if [ ! -x $STUDENT_NAME ] || [ ! -x $BUFF_NAME ] || [ ! -x $N4S_NAME ]; then
   exit 1
 fi
 
-"./$STUDENT_NAME" < $FIFONAME |  "./$BUFF_NAME" | "./$N4S_NAME" 2> /dev/null |  "./$BUFF_NAME" > $FIFONAME
+valgrind "./$STUDENT_NAME" < $FIFONAME |  "./$BUFF_NAME" | "./$N4S_NAME" 2> /dev/null |  "./$BUFF_NAME" > $FIFONAME

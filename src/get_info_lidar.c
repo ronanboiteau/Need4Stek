@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Thu May  5 00:10:12 2016 Ronan Boiteau
-** Last update Tue May 24 15:40:08 2016 Ronan Boiteau
+** Last update Wed May 25 12:07:48 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -20,7 +20,7 @@ static int	get_next_size(const char *clean)
   int		size;
 
   size = 0;
-  while (clean[size] != ':')
+  while (clean[size] && clean[size] != ':')
     ++size;
   return (size);
 }
