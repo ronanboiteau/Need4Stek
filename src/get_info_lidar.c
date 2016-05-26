@@ -5,15 +5,12 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Thu May  5 00:10:12 2016 Ronan Boiteau
-** Last update Wed May 25 12:07:48 2016 Ronan Boiteau
+** Last update Thu May 26 12:01:48 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
 #include "my.h"
 #include "n4s_lidar.h"
-
-/*1:OK:No errors so far:750.0:800.0:900.0:975.0:1050.0:*/
-/* 1:OK:No errors so far:600.0:625.0:675.0:700.0:800.0:850.0:900.0:975.0:1125.0:1225.0:1375.0:1500.0:2500.0:2500.0:2750.0:2750.0:2750.0:2750.0:2750.0:2750.0:2750.0:1225.0:1125.0:975.0:850.0:800.0:700.0:675.0:600.0:550.0:525.0:487.5:First CP Cleared: [0][11s 408448275ns] */
 
 static int	get_next_size(const char *clean)
 {
