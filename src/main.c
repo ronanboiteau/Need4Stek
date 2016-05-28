@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sat May 28 13:56:41 2016 Ronan Boiteau
+** Last update Sat May 28 14:01:05 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -40,16 +40,16 @@ static int	*get_grades(float *info)
   return (grades);
 }
 
-static void	print_grades(int *grades)
-{
-  int		idx;
+/* static void	print_grades(int *grades) */
+/* { */
+/*   int		idx; */
 
-  idx = 0;
-  while (idx < NB_GRADES - 1)
-    my_dprintf(STDERR, "%d - ", grades[idx++]);
-  my_dprintf(STDERR, "\n");
-  return ;
-}
+/*   idx = 0; */
+/*   while (idx < NB_GRADES - 1) */
+/*     my_dprintf(STDERR, "%d - ", grades[idx++]); */
+/*   my_dprintf(STDERR, "\n"); */
+/*   return ; */
+/* } */
 
 static void	my_putfloat(int fd, float nbr)
 {
