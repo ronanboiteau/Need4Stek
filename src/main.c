@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sat May 28 12:37:04 2016 Ronan Boiteau
+** Last update Sat May 28 13:56:41 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -118,7 +118,7 @@ static int	change_direction(float *info)
   if (!(grades = get_grades(info)))
     return (1);
   /* dprintf(STDERR, "middle - 1 -> %d\nmiddle -> %d\nmiddle + 1 -> %d\n", grades[NB_GRADES / 2 - 1], grades[NB_GRADES / 2], grades[NB_GRADES / 2 + 1]); */
-  print_grades(grades);
+  /* print_grades(grades); */
   if (grades[NB_GRADES / 2 - 1] > CRITIC
       && grades[NB_GRADES / 2] > CRITIC
       && grades[NB_GRADES / 2 + 1] > CRITIC)
@@ -138,8 +138,8 @@ static int	change_direction(float *info)
   my_printf("WHEELS_DIR:");
   my_putfloat(STDOUT, dir);
   my_printf("\n");
-  my_putfloat(STDERR, (dir > 1.0 ? 1.0 : dir));
-  dprintf(STDERR, "\n");
+  /* my_putfloat(STDERR, (dir > 1.0 ? 1.0 : dir)); */
+  /* dprintf(STDERR, "\n"); */
   if (is_end_of_track())
     return (1);
   adapt_speed(dir < 0 ? dir * -1 : dir);
