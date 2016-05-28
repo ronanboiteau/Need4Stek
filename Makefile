@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Wed May  4 16:15:12 2016 Ronan Boiteau
-## Last update Wed May 25 14:13:54 2016 Ronan Boiteau
+## Last update Sat May 28 13:59:56 2016 Ronan Boiteau
 ##
 
 NAME	 = ia
@@ -18,10 +18,8 @@ LDIR	 = lib/my
 
 CC	 = gcc
 CFLAGS	+= -I $(IDIR)
-CFLAGS	+= -Wall -Wextra
-CFLAGS	+= -Wpedantic -Wno-long-long
-#CFLAGS	+= -Werror
-CFLAGS	+= -g3
+CFLAGS	+= -Wall -Wextra -Wpedantic
+CFLAGS	+= -Werror
 
 SDIR	 = src/
 SRCS	 = $(SDIR)end_of_track.c				\
