@@ -5,7 +5,7 @@
 ## Login   <boitea_r@epitech.net>
 ## 
 ## Started on  Wed May  4 16:15:12 2016 Ronan Boiteau
-## Last update Sat May 28 13:59:56 2016 Ronan Boiteau
+## Last update Sun May 29 22:25:25 2016 Ronan Boiteau
 ##
 
 NAME	 = ia
@@ -25,7 +25,8 @@ SDIR	 = src/
 SRCS	 = $(SDIR)end_of_track.c				\
 	   $(SDIR)epur_raw_info.c				\
 	   $(SDIR)get_info_lidar.c				\
-	   $(SDIR)main.c
+	   $(SDIR)main.c					\
+	   $(SDIR)my_putfloat.c
 
 OBJS	 = $(SRCS:.c=.o)
 

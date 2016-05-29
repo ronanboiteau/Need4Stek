@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sun May 29 17:01:55 2016 Ronan Boiteau
+** Last update Sun May 29 22:25:04 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -40,41 +40,6 @@ static int	*get_grades(float *info)
   return (grades);
 }
 
-/* static void	print_grades(int *grades) */
-/* { */
-/*   int		idx; */
-
-/*   idx = 0; */
-/*   while (idx < NB_GRADES - 1) */
-/*     my_dprintf(STDERR, "%d - ", grades[idx++]); */
-/*   my_dprintf(STDERR, "\n"); */
-/*   return ; */
-/* } */
-
-static void	my_putfloat(int fd, float nbr)
-{
-  int		idx;
-
-  if (nbr < 0)
-    {
-      nbr = nbr * -1;
-      my_dprintf(fd, "-");
-    }
-  my_dprintf(fd, "%d", (int)nbr);
-  my_dprintf(fd, ".");
-  nbr -= (int)nbr;
-  nbr *= 10;
-  idx = 1;
-  while ((int)nbr == 0 && idx < 6)
-    {
-      nbr *= 10;
-      my_dprintf(fd, "0");
-      ++idx;
-    }
-  my_dprintf(fd, "%d", (int)(nbr * my_power(10, 7 - idx - 1)));
-  return ;
-}
-
 static float	get_wheels_dir(int *grades)
 {
   int		idx;
@@ -103,7 +68,7 @@ static void	adapt_speed(float speed, float dir)
   if (SPEED_FORMULA == 0)
     my_putfloat(STDOUT, 0.1);
   else
-    my_putfloat(STDOUT, SPEED_FORMULA * (dir == 0 ? 1.0 : 1.0 / dir));
+    my_putfloat(STDOUT, SPEED_FORMULA * (dir == 0.0 ? 1.0 : 1.0 / dir));
   my_printf("\n");
   return ;
 }
@@ -115,8 +80,7 @@ static int	change_direction(float *info, float *last_dir)
 
   if (!(grades = get_grades(info)))
     return (1);
-  if (grades[NB_GRADES / 2 - 1] > CRITIC
-      && grades[NB_GRADES / 2] > CRITIC
+  if (grades[NB_GRADES / 2 - 1] > CRITIC && grades[NB_GRADES / 2] > CRITIC
       && grades[NB_GRADES / 2 + 1] > CRITIC)
     {
       if (grades[1] < CRITIC / 2)
@@ -147,7 +111,7 @@ int		main(void)
   my_printf("START_SIMULATION\n");
   if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
-  my_printf("CAR_FORWARD:0.05\n"); /* <- WA DA FUK? */
+  my_printf("CAR_FORWARD:0.05\n");
   if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
   while (42)

@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May 25 14:10:38 2016 Ronan Boiteau
-** Last update Sun May 29 13:00:15 2016 Ronan Boiteau
+** Last update Sun May 29 22:27:22 2016 Ronan Boiteau
 */
 
 #ifndef N4S_ALGO_H_
@@ -21,6 +21,7 @@
 
 # define SPEED_FORMULA ((1.0 - speed) / 3.0)
 
+void		my_putfloat(int fd, float nbr);
 int		is_end_of_track(float * info);
 
 #endif /* !N4S_ALGO_H_ */
