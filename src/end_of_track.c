@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May 25 14:13:20 2016 Ronan Boiteau
-** Last update Sun May 29 22:46:03 2016 Ronan Boiteau
+** Last update Sun May 29 23:19:48 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -64,6 +64,14 @@ int		is_end_of_track(float *info)
   int		ret;
 
   input = get_next_line(STDIN);
+  if (input == NULL)
+    {
+      my_printf("CAR_FORWARD:0.0\n");
+      free(get_next_line(STDIN));
+      my_printf("STOP_SIMULATION\n");
+      free(get_next_line(STDIN));
+      return (1);
+    }
   ret = is_track_cleared(input);
   if (!ret && info)
     ret += is_dead_end(info);
