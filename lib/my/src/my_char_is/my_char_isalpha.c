@@ -5,9 +5,10 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 19:06:02 2015 Ronan Boiteau
-** Last update Thu Dec 17 22:58:31 2015 Ronan Boiteau
+** Last update Sun May 15 20:03:54 2016 Ronan Boiteau
 */
 
+#include <stdbool.h>
 #include "my.h"
 
 int		my_char_isalpha(const char letter)
@@ -15,6 +16,6 @@ int		my_char_isalpha(const char letter)
   if (!((letter >= 'A' && letter <= 'Z') ||
 	(letter >= 'a' && letter <= 'z') ||
 	(letter >= '0' && letter <= '9')))
-    return (FALSE);
-  return (TRUE);
+    return (false);
+  return (true);
 }
