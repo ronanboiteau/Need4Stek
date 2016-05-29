@@ -5,11 +5,12 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May 25 14:13:20 2016 Ronan Boiteau
-** Last update Wed May 25 14:35:16 2016 Ronan Boiteau
+** Last update Sun May 29 12:59:54 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
 #include "my.h"
+#include "n4s_algo.h"
 
 static int	is_track_cleared(char *input)
 {
@@ -39,18 +40,29 @@ static int	is_track_cleared(char *input)
   return (0);
 }
 
-static int	is_dead_end(void)
+static int	is_dead_end(float *info)
 {
-  return (0);
+  int		idx;
+
+  idx = 0;
+  while (info[idx])
+    {
+      if (info[idx] > CRASHED)
+	return (0);
+      ++idx;
+    }
+  return (1);
 }
 
-int		is_end_of_track(void)
+int		is_end_of_track(float *info)
 {
   char		*input;
   int		ret;
 
   input = get_next_line(STDIN);
-  ret = (is_track_cleared(input) || is_dead_end() ? 1 : 0);
+  ret = is_track_cleared(input);
+  if (info)
+    ret += is_dead_end(info);
   free(input);
-  return (ret);
+  return (ret > 0 ? 1 : 0);
 }

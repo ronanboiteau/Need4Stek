@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sat May 28 14:01:05 2016 Ronan Boiteau
+** Last update Sun May 29 12:54:06 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -129,7 +129,7 @@ static int	change_direction(float *info)
       	my_printf("WHEELS_DIR:0.15\n");
       else
 	my_printf("WHEELS_DIR:0.0\n");
-      if (is_end_of_track())
+      if (is_end_of_track(info))
 	return (1);
       adapt_speed(0.0);
       return (0);
@@ -140,7 +140,7 @@ static int	change_direction(float *info)
   my_printf("\n");
   /* my_putfloat(STDERR, (dir > 1.0 ? 1.0 : dir)); */
   /* dprintf(STDERR, "\n"); */
-  if (is_end_of_track())
+  if (is_end_of_track(info))
     return (1);
   adapt_speed(dir < 0 ? dir * -1 : dir);
   return (0);
@@ -151,10 +151,10 @@ int		main(void)
   float		*info;
 
   my_printf("START_SIMULATION\n");
-  if (is_end_of_track())
+  if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
   my_printf("CAR_FORWARD:0.25\n");
-  if (is_end_of_track())
+  if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
   while (42)
     {
@@ -163,7 +163,7 @@ int		main(void)
 	  my_dprintf(STDERR, "Cannot get lidar data.\n");
 	  return (EXIT_FAILURE);
 	}
-      if (change_direction(info) || is_end_of_track())
+      if (change_direction(info) || is_end_of_track(info))
 	return (EXIT_SUCCESS);
     }
 }

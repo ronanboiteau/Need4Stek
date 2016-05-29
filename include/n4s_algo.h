@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May 25 14:10:38 2016 Ronan Boiteau
-** Last update Sat May 28 12:12:29 2016 Ronan Boiteau
+** Last update Sun May 29 13:00:15 2016 Ronan Boiteau
 */
 
 #ifndef N4S_ALGO_H_
@@ -17,9 +17,10 @@
 # define POS (0)
 # define GRADE (1)
 # define CRITIC (600)
+# define CRASHED (50)
 
 # define SPEED_FORMULA ((1.0 - speed) / 3.0)
 
-int		is_end_of_track(void);
+int		is_end_of_track(float * info);
 
 #endif /* !N4S_ALGO_H_ */
