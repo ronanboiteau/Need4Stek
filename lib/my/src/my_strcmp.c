@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Tue Oct  6 13:33:12 2015 Ronan Boiteau
-** Last update Mon Jan 18 21:02:14 2016 Ronan Boiteau
+** Last update Sun May 29 23:03:20 2016 Ronan Boiteau
 */
 
-#include "my.h"
 #include <stdlib.h>
+#include "my.h"
 
 int		my_strcmp(const char *str1, const char *str2)
 {

@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sun Oct 18 18:09:47 2015 Ronan Boiteau
-** Last update Mon Jan 18 17:30:48 2016 Ronan Boiteau
+** Last update Sun May 29 23:04:24 2016 Ronan Boiteau
 */
 
-#include "my.h"
 #include <stdlib.h>
+#include "my.h"
 
 int		my_str_isupper(const char *str)
 {

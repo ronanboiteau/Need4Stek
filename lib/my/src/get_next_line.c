@@ -5,12 +5,12 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Mon Dec 21 03:02:16 2015 Ronan Boiteau
-** Last update Sun Jan 17 23:22:51 2016 Ronan Boiteau
+** Last update Sun May 29 23:02:45 2016 Ronan Boiteau
 */
 
-#include "get_next_line.h"
 #include <stdlib.h>
 #include <unistd.h>
+#include "get_next_line.h"
 
 static char	*my_strdup(const char *src)
 {

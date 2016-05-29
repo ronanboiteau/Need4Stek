@@ -5,13 +5,13 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sat Nov 14 08:17:53 2015 Ronan Boiteau
-** Last update Sun Feb 21 18:37:10 2016 Ronan Boiteau
+** Last update Sun May 29 23:04:57 2016 Ronan Boiteau
 */
 
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
-#include <stdlib.h>
 
 static t_uint	_if_not_flag(int fd, t_uint printed, t_cstring *str)
 {

@@ -5,11 +5,11 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Fri Dec 18 02:12:36 2015 Ronan Boiteau
-** Last update Sun Feb 21 15:55:53 2016 Ronan Boiteau
+** Last update Sun May 29 23:03:42 2016 Ronan Boiteau
 */
 
-#include "my.h"
 #include <limits.h>
+#include "my.h"
 
 static int	_skip_letters(const char *str)
 {

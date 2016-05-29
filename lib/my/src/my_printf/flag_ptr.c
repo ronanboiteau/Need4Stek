@@ -5,13 +5,13 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Sat Nov  7 18:02:00 2015 Ronan Boiteau
-** Last update Mon Jan 18 17:29:27 2016 Ronan Boiteau
+** Last update Sun May 29 23:04:47 2016 Ronan Boiteau
 */
 
+#include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
 #include "printf_puts.h"
-#include <stdlib.h>
 
 t_uint		_ptr_to_hex(int fd, t_uint printed, va_list ap)
 {
