@@ -5,7 +5,7 @@
 ** Login   <boitea_r@epitech.net>
 ** 
 ** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sun May 29 12:54:06 2016 Ronan Boiteau
+** Last update Sun May 29 17:01:55 2016 Ronan Boiteau
 */
 
 #include <stdlib.h>
@@ -97,63 +97,57 @@ static float	get_wheels_dir(int *grades)
   return (1.0 / ((((float)greatest[POS]) / (float)NB_GRADES) * 2.0) - 1);
 }
 
-static void	adapt_speed(float speed)
+static void	adapt_speed(float speed, float dir)
 {
   my_printf("CAR_FORWARD:");
   if (SPEED_FORMULA == 0)
     my_putfloat(STDOUT, 0.1);
-  else if (SPEED_FORMULA > 0.5)
-    my_putfloat(STDOUT, 0.8);
   else
-    my_putfloat(STDOUT, SPEED_FORMULA);
+    my_putfloat(STDOUT, SPEED_FORMULA * (dir == 0 ? 1.0 : 1.0 / dir));
   my_printf("\n");
   return ;
 }
 
-static int	change_direction(float *info)
+static int	change_direction(float *info, float *last_dir)
 {
   int		*grades;
   float		dir;
 
   if (!(grades = get_grades(info)))
     return (1);
-  /* dprintf(STDERR, "middle - 1 -> %d\nmiddle -> %d\nmiddle + 1 -> %d\n", grades[NB_GRADES / 2 - 1], grades[NB_GRADES / 2], grades[NB_GRADES / 2 + 1]); */
-  /* print_grades(grades); */
   if (grades[NB_GRADES / 2 - 1] > CRITIC
       && grades[NB_GRADES / 2] > CRITIC
       && grades[NB_GRADES / 2 + 1] > CRITIC)
     {
       if (grades[1] < CRITIC / 2)
-	my_printf("WHEELS_DIR:-0.15\n");
+	dir = -0.05;
       else if (grades[NB_GRADES - 2] < CRITIC / 2)
-      	my_printf("WHEELS_DIR:0.15\n");
+	dir = 0.05;
       else
-	my_printf("WHEELS_DIR:0.0\n");
-      if (is_end_of_track(info))
-	return (1);
-      adapt_speed(0.0);
-      return (0);
+	dir = 0.00;
     }
-  dir = get_wheels_dir(grades);
+  else
+    dir = get_wheels_dir(grades);
   my_printf("WHEELS_DIR:");
   my_putfloat(STDOUT, dir);
   my_printf("\n");
-  /* my_putfloat(STDERR, (dir > 1.0 ? 1.0 : dir)); */
-  /* dprintf(STDERR, "\n"); */
   if (is_end_of_track(info))
     return (1);
-  adapt_speed(dir < 0 ? dir * -1 : dir);
+  adapt_speed((dir < 0 ? dir * -1 : dir), *last_dir);
+  *last_dir = dir;
   return (0);
 }
 
 int		main(void)
 {
   float		*info;
+  float		last_dir;
 
+  last_dir = 0.0;
   my_printf("START_SIMULATION\n");
   if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
-  my_printf("CAR_FORWARD:0.25\n");
+  my_printf("CAR_FORWARD:0.05\n"); /* <- WA DA FUK? */
   if (is_end_of_track(NULL))
     return (EXIT_SUCCESS);
   while (42)
@@ -163,7 +157,7 @@ int		main(void)
 	  my_dprintf(STDERR, "Cannot get lidar data.\n");
 	  return (EXIT_FAILURE);
 	}
-      if (change_direction(info) || is_end_of_track(info))
+      if (change_direction(info, &last_dir) || is_end_of_track(info))
 	return (EXIT_SUCCESS);
     }
 }
