@@ -4,6 +4,8 @@
 
 C artificial intelligence that guides an autonomous car through a virtual racetrack.
 
+<img alt="Need4Stek demo" src="/artwork/need4stek-demo.gif"/>
+
 ## Requirements
 
  - [A Linux distribution](https://en.wikipedia.org/wiki/Linux_distribution)
