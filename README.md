@@ -32,7 +32,7 @@ If you're using the copy of V-REP shipped with Need4Stek, run this command from 
 
  3. **Import a scene**
 
-Inside V-REP, go to `File` > `Open scene...` and import one of the scenes (`.ttt`) located in the `scene/` folder at the root of the repository. Each scene represent a racetrack.
+Inside V-REP, go to `File` > `Open scene...` and import one of the scenes (`.ttt`) located in the `scene/` folder at the root of the repository. Each scene represents a racetrack.
 
  4. **Run the simulation**
 
