@@ -23,13 +23,13 @@ make
 
  2. **Run V-REP 3.2.3**
 
-A copy of V-REP for Linux 64-bits is available in the `V-REP_PLAYER_V3_2_3_rev4_64_Linux/` folder at the root of the repository. You can also download [V-REP 3.2.3 here](http://www.coppeliarobotics.com/previousversions.html).
+A copy of V-REP for Linux 64-bits is available in the `dependencies/` folder at the root of the repository. You can also download [V-REP 3.2.3 here](http://www.coppeliarobotics.com/previousversions.html).
 
 To run V-REP 3.2.3, execute the `vrep.sh` Bash script.
 
 If you're using the copy of V-REP shipped with Need4Stek, run this command from the root of the repository:
 ```
-./V-REP_PLAYER_V3_2_3_rev4_64_Linux/vrep.sh
+./dependencies/V-REP_PLAYER_V3_2_3_rev4_64_Linux/vrep.sh
 ```
 
  3. **Import a scene**
