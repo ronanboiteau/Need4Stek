@@ -1,13 +1,3 @@
-/*
-** main.c for n4s in /home/boitea_r/c/CPE_2015_n4s
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Wed May  4 16:16:08 2016 Ronan Boiteau
-** Last update Sun May 29 22:43:04 2016 Benjamin Dubus
-*/
-
 #include <stdlib.h>
 #include "my.h"
 #include "n4s_algo.h"

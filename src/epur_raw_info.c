@@ -1,13 +1,3 @@
-/*
-** epur_raw_info.c for n4s in /home/boitea_r/c/CPE_2015_n4s
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue May 24 10:51:11 2016 Ronan Boiteau
-** Last update Sun May 29 22:42:05 2016 Benjamin Dubus
-*/
-
 #include <stdlib.h>
 #include "my.h"
 #include "n4s_lidar.h"

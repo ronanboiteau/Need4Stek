@@ -1,13 +1,3 @@
-/*
-** get_info_lidar.c for n4s in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Thu May  5 00:10:12 2016 Ronan Boiteau
-** Last update Sun May 29 22:37:06 2016 Benjamin Dubus
-*/
-
 #include <stdlib.h>
 #include "my.h"
 #include "n4s_lidar.h"

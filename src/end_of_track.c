@@ -1,13 +1,3 @@
-/*
-** end_of_track.c for n4s in /home/boitea_r/c/CPE_2015_n4s
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Wed May 25 14:13:20 2016 Ronan Boiteau
-** Last update Sun May 29 23:19:48 2016 Ronan Boiteau
-*/
-
 #include <stdlib.h>
 #include "my.h"
 #include "n4s_algo.h"

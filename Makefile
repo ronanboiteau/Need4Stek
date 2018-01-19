@@ -1,13 +1,14 @@
 NAME	 = ai
 
 IDIR	 = include/
+IDIR_MY	 = lib/my/include/
 
 LIB	 = libmy.a
 LNAME	 = my
 LDIR	 = lib/my
 
 CC	 = gcc
-CFLAGS	+= -I $(IDIR)
+CFLAGS	+= -I $(IDIR) -I $(IDIR_MY)
 CFLAGS	+= -Wall -Wextra -Wpedantic -Werror
 
 SRCS_DIR	= src/
