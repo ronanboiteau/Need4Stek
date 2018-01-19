@@ -2,7 +2,7 @@
 
 {EPITECH.} first year project.
 
-C artificial intelligence that guides a car through a racetrack.
+C artificial intelligence that guides an autonomous car through a virtual racetrack.
 
 ## Requirements
 
