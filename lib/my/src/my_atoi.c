@@ -1,13 +1,3 @@
-/*
-** my_atoi.c for my_atoi in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Fri Dec 18 02:12:36 2015 Ronan Boiteau
-** Last update Sun May 29 23:03:42 2016 Ronan Boiteau
-*/
-
 #include <limits.h>
 #include "my.h"
 
@@ -42,8 +32,6 @@ int		my_atoi(const char *str)
   int		idx;
   int		lenght;
 
-  if (!my_str_isnum(str))
-    return (-1);
   result = 0;
   idx = _skip_letters(str);
   reverser = _set_reverser(str, &idx);
@@ -55,7 +43,7 @@ int		my_atoi(const char *str)
       result = result + (t_ll)((str[idx] - '0') *
 			       my_power(10, lenght - idx - 1));
       if (result < INT_MIN || result - 1 > INT_MAX)
-	return (-1);
+	return (0);
       idx += 1;
     }
   result *= reverser;

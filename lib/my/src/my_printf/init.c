@@ -1,13 +1,3 @@
-/*
-** init.c for my_printf in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sat Nov 14 08:25:02 2015 Ronan Boiteau
-** Last update Tue Jan 19 23:29:25 2016 Ronan Boiteau
-*/
-
 #include "printf_flags.h"
 
 int		_init_flag(char flag_char,

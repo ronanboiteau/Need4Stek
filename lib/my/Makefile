@@ -1,22 +1,8 @@
-##
-## Makefile for libmy in /home/boitea_r
-## 
-## Made by Ronan Boiteau
-## Login   <boitea_r@epitech.net>
-## 
-## Started on  Tue Nov 10 15:47:58 2015 Ronan Boiteau
-## Last update Sun May 29 23:13:39 2016 Ronan Boiteau
-##
+NAME	 = libmy.a
 
-IDIR	 = include/
-INC	 = $(IDIR)colors.h				\
-	  $(IDIR)get_next_line.h			\
-	  $(IDIR)my.h					\
-	  $(IDIR)my_macro.h				\
-	  $(IDIR)my_typedef.h				\
-	  $(IDIR)printf_flags.h				\
-	  $(IDIR)printf_puts.h				\
-	  $(IDIR)string.h
+RM	 = rm -f
+
+IDIR	= include/
 
 CC	 = gcc
 CFLAGS	+= -I $(IDIR)
@@ -24,45 +10,82 @@ CFLAGS	+= -Wall -Wextra
 CFLAGS	+= -Wpedantic -Wno-long-long
 CFLAGS	+= -Werror
 
-RM	 = rm -f
+CHAR_IS_DIR	= my_char_is/
+CHAR_IS_FILES	= my_char_isalpha.c		\
+		  my_char_islower.c		\
+		  my_char_isnum.c		\
+		  my_char_isprintable.c		\
+		  my_char_isupper.c
+CHAR_IS		= $(addprefix $(CHAR_IS_DIR), $(CHAR_IS_FILES))
 
-NAME	 = ../libmy.a
+ENV_DIR		= env/
+ENV_FILES	= my_envcpy.c			\
+		  my_getenv.c			\
+		  my_printenv.c			\
+		  my_setenv.c			\
+		  my_unsetenv.c
+ENV		= $(addprefix $(ENV_DIR), $(ENV_FILES))
 
-SDIR	 = src/
-SRCS	 = $(SDIR)get_next_line.c			\
-	  $(SDIR)match.c				\
-	  $(SDIR)my_atof.c				\
-	  $(SDIR)my_atoi.c				\
-	  $(SDIR)my_char_is/my_char_isalpha.c		\
-	  $(SDIR)my_char_is/my_char_islower.c		\
-	  $(SDIR)my_char_is/my_char_isnum.c		\
-	  $(SDIR)my_char_is/my_char_isprintable.c	\
-	  $(SDIR)my_char_is/my_char_isupper.c		\
-	  $(SDIR)my_cmp.c				\
-	  $(SDIR)my_free_2d_tab.c			\
-	  $(SDIR)my_printf/compare_char.c		\
-	  $(SDIR)my_printf/my_printf.c			\
-	  $(SDIR)my_printf/find_flag.c			\
-	  $(SDIR)my_printf/flag_char.c			\
-	  $(SDIR)my_printf/flag_int.c			\
-	  $(SDIR)my_printf/flag_ptr.c			\
-	  $(SDIR)my_printf/flag_str.c			\
-	  $(SDIR)my_printf/flag_uint.c			\
-	  $(SDIR)my_printf/init.c			\
-	  $(SDIR)my_printf/my_putchar.c			\
-	  $(SDIR)my_printf/my_putnbr_base.c		\
-	  $(SDIR)my_printf/my_put_nbr.c			\
-	  $(SDIR)my_printf/my_putstr.c			\
-	  $(SDIR)my_printf/my_showstr.c			\
-	  $(SDIR)my_power.c				\
-	  $(SDIR)my_str_is/my_str_isnum.c		\
-	  $(SDIR)my_strcmp.c				\
-	  $(SDIR)my_strdup.c				\
-	  $(SDIR)my_strlen.c				\
-	  $(SDIR)my_strncat.c				\
-	  $(SDIR)my_strncmp.c				\
-	  $(SDIR)my_strncpy.c				\
-	  $(SDIR)nmatch.c
+PRINTF_DIR	= my_printf/
+PRINTF_FILES	= compare_char.c	\
+		  find_flag.c		\
+		  flag_char.c		\
+		  flag_int.c		\
+		  flag_ptr.c		\
+		  flag_str.c		\
+		  flag_uint.c		\
+		  init.c		\
+		  my_printf.c		\
+		  my_putchar.c		\
+		  my_putnbr_base.c	\
+		  my_put_nbr.c		\
+		  my_putstr.c		\
+		  my_showstr.c
+PRINTF		= $(addprefix $(PRINTF_DIR), $(PRINTF_FILES))
+
+STR_IS_DIR	= my_str_is/
+STR_IS_FILES	= my_str_isalpha.c		\
+		  my_str_islower.c		\
+		  my_str_isnum.c		\
+		  my_str_isprintable.c		\
+		  my_str_isupper.c
+STR_IS		= $(addprefix $(STR_IS_DIR), $(STR_IS_FILES))
+
+SRCS_DIR	= src/
+SRCS_FILES	= get_next_line.c			\
+		  match.c				\
+		  my_atof.c				\
+		  my_atoi.c				\
+		  my_cmp.c				\
+		  my_epur_str.c				\
+		  my_find_prime_sup.c			\
+		  my_free_2d_tab.c			\
+		  my_is_prime.c				\
+		  my_max_int_tab.c			\
+		  my_min_int_tab.c			\
+		  my_power.c				\
+		  my_realloc.c				\
+		  my_revstr.c				\
+		  my_sort_int_tab.c			\
+		  my_square_root.c			\
+		  my_strcapitalize.c			\
+		  my_strcmp.c				\
+		  my_strdup.c				\
+		  my_strlen.c				\
+		  my_strlowcase.c			\
+		  my_strncat.c				\
+		  my_strncmp.c				\
+		  my_strncpy.c				\
+		  my_strstr.c				\
+		  my_str_to_wordtab.c			\
+		  my_strupcase.c			\
+		  my_swap.c				\
+		  nmatch.c				\
+		  $(CHAR_IS)				\
+		  $(ENV)				\
+		  $(PRINTF)				\
+		  $(STR_IS)
+SRCS		= $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 OBJS	 = $(SRCS:.c=.o)
 
@@ -71,7 +94,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(OBJS)
-	cp $(INC) ../../$(IDIR)
 
 clean:
 	$(RM) $(OBJS)

@@ -1,13 +1,3 @@
-/*
-** printf_puts.h for my_printf in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Thu Dec 17 23:29:01 2015 Ronan Boiteau
-** Last update Thu Feb  4 19:17:35 2016 Ronan Boiteau
-*/
-
 #ifndef PRINTF_PUTS_H_
 # define PRINTF_PUTS_H_
 

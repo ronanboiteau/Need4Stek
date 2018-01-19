@@ -1,13 +1,3 @@
-/*
-** colors.h for colors in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sun Jan 31 02:51:44 2016 Ronan Boiteau
-** Last update Sun Jan 31 02:57:41 2016 Ronan Boiteau
-*/
-
 #ifndef COLORS_H_
 # define COLORS_H_
 

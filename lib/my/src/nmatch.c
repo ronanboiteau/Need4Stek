@@ -1,32 +1,23 @@
-/*
-** nmatch.c for nmatch in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sat Oct 10 22:11:14 2015 Ronan Boiteau
-** Last update Sun May 29 23:02:58 2016 Ronan Boiteau
-*/
-
+#include <stdbool.h>
 #include <stdlib.h>
 #include "my.h"
 
 int	nmatch(char *str1, char *str2)
 {
   if (str1 == NULL || str2 == NULL)
-    return (FALSE);
-  else if ((*str1 == C_NUL) && (*str2 == C_NUL))
-    return (TRUE);
-  else if ((*str1 != C_NUL) && (*str2 == '*'))
+    return (false);
+  else if ((*str1 == '\0') && (*str2 == '\0'))
+    return (true);
+  else if ((*str1 != '\0') && (*str2 == '*'))
     return (nmatch(str1, str2 + 1) + nmatch(str1 + 1, str2));
-  else if ((*str1 == C_NUL) && (*str2 == '*'))
+  else if ((*str1 == '\0') && (*str2 == '*'))
     return (nmatch(str1, str2 + 1));
-  else if ((*str2 != C_NUL) && (*str1 == '*'))
+  else if ((*str2 != '\0') && (*str1 == '*'))
     return (nmatch(str1 + 1, str2) + nmatch(str1, str2 + 1));
-  else if ((*str2 == C_NUL) && (*str1 == '*'))
+  else if ((*str2 == '\0') && (*str1 == '*'))
     return (nmatch(str1 + 1, str2));
   else if (*str1 == *str2)
     return (nmatch(str1 + 1, str2 + 1));
   else
-    return (FALSE);
+    return (false);
 }

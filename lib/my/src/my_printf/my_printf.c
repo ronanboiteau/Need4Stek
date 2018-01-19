@@ -1,13 +1,4 @@
-/*
-** my_printf.c for my_printf in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sat Nov 14 08:17:53 2015 Ronan Boiteau
-** Last update Sun May 29 23:04:57 2016 Ronan Boiteau
-*/
-
+#include <stdbool.h>
 #include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"
@@ -21,13 +12,13 @@ static t_uint	_if_not_flag(int fd, t_uint printed, t_cstring *str)
     str->idx -= 1;
   printed += my_putchar_fd(fd, '%');
   str->idx += 1;
-  space = FALSE;
+  space = false;
   while (str->str[str->idx] && !_char_isletter(str->str[str->idx]))
     {
-      if (str->str[str->idx] == ' ' && space == FALSE)
+      if (str->str[str->idx] == ' ' && space == false)
 	{
 	  printed += my_putchar_fd(fd, ' ');
-	  space = TRUE;
+	  space = true;
 	}
       str->idx += 1;
     }
@@ -109,4 +100,28 @@ int		my_printf(const char *format, ...)
     }
   va_end(ap);
   return (printed);
+}
+
+void		my_exit(int exit_code, const char *format, ...)
+{
+  va_list	ap;
+  t_cstring	str;
+  t_flag	flags[FLAGS_NBR];
+
+  _init_structures(flags, &str, format);
+  va_start(ap, format);
+  if (str.str == NULL)
+    exit(exit_code);
+  while (str.str[str.idx] != '\0')
+    {
+      if (str.str[str.idx] != '%')
+	my_putchar_fd(STDERR, str.str[str.idx]);
+      else if (str.str[str.idx] == '%' && str.str[str.idx + 1] == '\0')
+	exit(exit_code);
+      else if (str.str[str.idx] == '%' && str.str[str.idx + 1])
+	_flags_handler(STDERR, flags, &str, ap);
+      str.idx += 1;
+    }
+  va_end(ap);
+  exit(exit_code);
 }

@@ -1,13 +1,3 @@
-/*
-** flag_ptr.c for my_printf in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sat Nov  7 18:02:00 2015 Ronan Boiteau
-** Last update Sun May 29 23:04:47 2016 Ronan Boiteau
-*/
-
 #include <stdlib.h>
 #include "my.h"
 #include "printf_flags.h"

@@ -1,13 +1,3 @@
-/*
-** my_free_2d_tab.c for libmy in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Wed Dec 16 17:55:52 2015 Ronan Boiteau
-** Last update Sun May 29 23:03:48 2016 Ronan Boiteau
-*/
-
 #include <stdlib.h>
 #include "my.h"
 

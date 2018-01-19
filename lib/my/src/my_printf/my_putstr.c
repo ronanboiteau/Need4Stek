@@ -1,13 +1,3 @@
-/*
-** my_putstr.c for my_putstr in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Oct  6 09:33:22 2015 Ronan Boiteau
-** Last update Sun May 29 23:05:06 2016 Ronan Boiteau
-*/
-
 #include <stdlib.h>
 #include <unistd.h>
 #include "my.h"

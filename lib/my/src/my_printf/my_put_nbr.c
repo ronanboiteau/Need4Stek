@@ -1,13 +1,3 @@
-/*
-** my_put_nbr.c for my_put_nbr.c in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Oct  6 09:33:53 2015 Ronan Boiteau
-** Last update Sun Jan 17 16:25:04 2016 Ronan Boiteau
-*/
-
 #include "my.h"
 #include "printf_puts.h"
 

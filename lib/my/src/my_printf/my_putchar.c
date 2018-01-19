@@ -1,13 +1,3 @@
-/*
-** my_putchar.c for my_putchar in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Tue Oct  6 09:33:09 2015 Ronan Boiteau
-** Last update Sun May 29 23:04:55 2016 Ronan Boiteau
-*/
-
 #include <unistd.h>
 #include "my.h"
 

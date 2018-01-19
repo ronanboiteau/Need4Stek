@@ -1,13 +1,3 @@
-/*
-** my_atof.c for my_atof in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Thu May  5 00:25:38 2016 Ronan Boiteau
-** Last update Thu May  5 01:35:25 2016 Ronan Boiteau
-*/
-
 #include <stdlib.h>
 #include "my.h"
 

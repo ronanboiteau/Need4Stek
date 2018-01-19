@@ -1,13 +1,3 @@
-/*
-** printf_flags.h for my_printf in /home/boitea_r/c/lib/my/src
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Fri Dec  4 22:35:02 2015 Ronan Boiteau
-** Last update Tue Jan 19 23:30:02 2016 Ronan Boiteau
-*/
-
 #ifndef PRINTF_FLAGS_H_
 # define PRINTF_FLAGS_H_
 
@@ -22,6 +12,12 @@ typedef struct	s_flag
   t_uint	(*fct)(int fd, t_uint printed, va_list ap);
   char		flag_char;
 }		t_flag;
+
+typedef struct	s_cstring
+{
+  const char	*str;
+  unsigned int	idx;
+}		t_cstring;
 
 int		_char_isflag(const char letter, const t_flag *flags);
 int		_char_isletter(const char letter);
@@ -39,8 +35,8 @@ t_uint		_ptr_printed_chars(int fd, t_uint printed, va_list ap);
 t_uint		_double_decimal(int fd, t_uint printed, va_list ap);
 int		_init_flag(char flag_char,
 			   t_uint (*fct)(int fd,
-				       t_uint printed,
-				       va_list ap),
+					 t_uint printed,
+					 va_list ap),
 			   t_flag *flags);
 void		_init_structures(t_flag *flags,
 				 t_cstring *str,

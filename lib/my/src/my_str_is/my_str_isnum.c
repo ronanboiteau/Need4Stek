@@ -1,13 +1,3 @@
-/*
-** my_str_isnum.c for my_str_isnum in /home/boitea_r
-** 
-** Made by Ronan Boiteau
-** Login   <boitea_r@epitech.net>
-** 
-** Started on  Sun Oct 18 18:01:08 2015 Ronan Boiteau
-** Last update Sun May 15 20:17:12 2016 Ronan Boiteau
-*/
-
 #include <stdbool.h>
 #include <stdlib.h>
 #include "my.h"
