@@ -1,0 +1,13 @@
+V-REP PLAYER LICENSE AGREEMENT
+
+By installing V-REP PLAYER (the SOFTWARE), you (either an individual or a single entity, the LICENSEE) accept the terms and conditions of this licensing agreement.
+
+If the LICENSEE does not agree with the terms of this license, the LICENSEE must remove all files related to the SOFTWARE from any storage devices and cease to use the SOFTWARE.
+
+1) The LICENSEE may use and distribute the SOFTWARE as he pleases, given that international copyright laws are respected.
+
+THE SOFTWARE IS DISTRIBUTED "AS IS", WITHOUT ANY EXPRESS OR IMPLIED WARRANTY. THE LICENSEE WILL USE IT AT HIS/HER OWN RISK. THE ORIGINAL AUTHORS AND COPPELIA ROBOTICS GMBH WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+
+The SOFTWARE is copyrighted by Coppelia Robotics GmbH. All rights reserved.
+
+(a copy of this license agreement can be found in the installation directory)

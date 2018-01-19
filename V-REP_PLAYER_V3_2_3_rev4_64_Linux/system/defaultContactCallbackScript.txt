@@ -1,0 +1,70 @@
+-- This example script handles contacts
+-- Be very careful when calling V-REP API functions from here:
+-- 1. This routine gets called often, so it will slow down simulation (this is called at each dynamic simulation step, by default 10x more often than a child script)
+-- 2. Some API functions are not meant to be called from here
+
+-- Following data is handed over from V-REP:
+objectHandle1,objectHandle2,engine=...
+
+if not retTable1 then
+	if engine==sim_physics_bullet then
+		retTable1={0,0,0} -- see below or the user manual for parameter description
+		retTable2={1,0,0,0,0,0,0,0,0,0,0,0,0,0} -- see below or the user manual for parameter description
+	end
+	if engine==sim_physics_ode then
+		retTable1={0,4,4+8+16+2048} -- see below or the user manual for parameter description
+		retTable2={0.25,0,0,0,0.25,0,0,0,0,0,0,0,0,0} -- see below or the user manual for parameter description
+	end
+	if engine==sim_physics_newton then
+		-- Only called when the Newton plugin is compiled with the 'USE_THREAD_EMULATION' (or 'DG_USE_THREAD_EMULATION') define
+		retTable1={0,0,0} -- see below or the user manual for parameter description
+		retTable2={1,1,0,0,0,0,0,0,0,0,0,0,0,0} -- see below or the user manual for parameter description
+	end
+	if engine==sim_physics_vortex then
+		retTable1={0,0,0} -- see below or the user manual for parameter description
+		retTable2={0,0,0,0,0,0,0,0,0,0,0,0,0,0} -- see below or the user manual for parameter description
+	end
+end
+
+-- Following data must be returned to V-REP:
+-- -1 if you don't want to handle that contact here (i.e. the default handling will be used, or the C/C++ callback will decide)
+-- 0  if the 2 items should not react to collision (this overrides the default contact handling)
+-- 1,tableValues1,tableValues2 if you handle this contact (this overrides the default contact handling)
+
+return 1,retTable1,retTable2
+
+
+-- EXPLANATION FOR THE RETURN ARGUMENTS (refer also to the simRegisterContactCallback API function):
+--
+-- retTable1 (table with 3 values):
+-- 	[0] should be set to zero (indicates the function version, for future extensions)
+-- 	[1] Bullet, Newton and Vortex: not used (keep 0). ODE: contactCount (max. number of contact points to generate)
+-- 	[2] Bullet, Newton and Vortex: not used (keep 0). ODE: contactMode (can be bit-wise combined):
+-- 		1=dContactMu2
+-- 		2=dContactFDir1
+-- 		4=dContactBounce
+-- 		8=dContactSoftERP
+-- 		16=dContactSoftCFM
+-- 		32=dContactMotion1
+-- 		64=dContactMotion2
+-- 		128=dContactSlip1
+-- 		256=dContactSlip2
+-- 		512=dContactApprox1_1
+-- 		1024=dContactApprox1_2
+-- 		2048=dContactApprox1
+
+-- retTable2 (table with 14 values):
+-- 	[0] Bullet: combined friction. ODE: mu. Newton: combined static friction. Vortex: not used (keep 0.0)
+-- 	[1] Bullet: combined restitution. ODE: mu2. Newton: combined kinetic friction. Vortex: not used (keep 0.0)
+-- 	[2] Bullet and Vortex: not used (keep 0.0). ODE: bounce. Newton: combined restitution
+-- 	[3] Bullet, Newton and Vortex: not used (keep 0.0). ODE: bounce_vel
+-- 	[4] Bullet, Newton and Vortex: not used (keep 0.0). ODE: soft_cfm
+-- 	[5] Bullet, Newton and Vortex: not used (keep 0.0). ODE: soft_erp
+-- 	[6] Bullet, Newton and Vortex: not used (keep 0.0). ODE: motion1
+-- 	[7] Bullet, Newton and Vortex: not used (keep 0.0). ODE: motion2
+-- 	[8] Bullet, Newton and Vortex: not used (keep 0.0). ODE: motionN
+-- 	[9] Bullet, Newton and Vortex: not used (keep 0.0). ODE: slip1
+-- 	[10] Bullet, Newton and Vortex: not used (keep 0.0). ODE: slip2
+-- 	[11] Bullet, Newton and Vortex: not used (keep 0.0). ODE: fdir1[0]
+-- 	[12] Bullet, Newton and Vortex: not used (keep 0.0). ODE: fdir1[1]
+-- 	[13] Bullet, Newton and Vortex: not used (keep 0.0). ODE: fdir1[2]
