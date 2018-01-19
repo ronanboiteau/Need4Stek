@@ -1,0 +1,38 @@
+-- This is the general callback script.
+-- Variables sim_callback_id and sim_callback_tag are handed over by the system
+
+-- DO NOT WRITE CODE OUTSIDE OF THE if-then-end SECTIONS BELOW!! (unless the code is a function definition)
+
+if sim_callback_id==sim_callbackid_rossubscriber then
+	-- When the callback is a ROS subscriber callback, 
+	-- return a value >0 to indicate that the message
+	-- should be processed by the ROS plugin.
+	if sim_callback_tag==0 then
+	
+	end
+	
+	return 1
+end
+
+if sim_callback_id==sim_callbackid_dynstep then
+	-- This is called at the beginning or end of
+	-- an individual dynamics simulation step (by
+	-- default, there are 10 times more dynamics
+	-- simulation steps as simulation steps)
+	if sim_callback_tag==0 then
+		-- at the beginning of a dynamics step
+	end
+
+	if sim_callback_tag==1 then
+		-- at the end of a dynamics step
+	end
+
+	return 0
+end
+
+if sim_callback_id==sim_callbackid_userdefined+42 then
+	-- This is a user defined callback. User defined
+	-- callbacks start at ID sim_callbackid_userdefined upwards.
+	
+	return 1
+end

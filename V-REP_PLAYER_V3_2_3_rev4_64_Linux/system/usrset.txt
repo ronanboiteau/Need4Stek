@@ -1,0 +1,241 @@
+// Debugging
+// =================================================
+alwaysShowConsole = false
+debugGuiThreadAndSimThreadSynchronizationActivity = false // will also slow down V-REP
+debugGuiThreadAndSimThreadSynchronizationLockFailActivity = false
+debugInternalFunctionAccess = false // will also heavily slow down V-REP
+debugCApiAccess = false // will also drastically slow down V-REP
+debugLuaApiAccess = false // will also slow down V-REP
+debugThreadSwitches = false // will also slow down V-REP
+debugEasylockActivity = false // will also slow down V-REP
+sendDebugInformationToFile = false // if true, debug info is sent to debugLog.txt
+
+
+// Rendering
+// =================================================
+idleFps = 8
+threadedRenderingDuringSimulation = 0 // recommended to keep 0 (-1=disabled, 0=pre-enabled, 1=enabled).
+desiredOpenGlMajor = -1 // recommended to keep -1.
+desiredOpenGlMinor = -1 // recommended to keep -1.
+offscreenContextType = -1 // recommended to keep -1 (-1=default, 0=Qt offscreen, 1=QGLWidget/QOpenGLWidget visible, 2=QGLWidget/QOpenGLWidget invisible).
+fboType = -1 // recommended to keep -1 (-1=default, 0=native, 1=QOpenGLFramebufferObject).
+forceFboViaExt = false // recommended to keep false.
+vboOperation = -1 // recommended to keep -1 (-1=default, 0=always off, 1=on when available).
+vboPersistenceInMs = 5000 // recommended to keep 5000.
+oglCompatibilityTweak1 = false // recommended to keep false since it causes small memory leaks.
+visionSensorsUseGuiThread_windowed = -1 // recommended to keep -1 (-1=default, 0=GUI when not otherwise possible, 1=always GUI).
+visionSensorsUseGuiThread_headless = -1 // recommended to keep -1 (-1=default, 0=GUI when not otherwise possible, 1=always GUI).
+useGlFinish = false // recommended to keep false. Graphic card dependent.
+useGlFinish_visionSensors = false // recommended to keep false. Graphic card dependent.
+vsync = 0 // recommended to keep at 0. Graphic card dependent.
+debugOpenGl = false
+stereoDist = 0 // 0=no stereo, otherwise the intra occular distance (0.0635 for the human eyes).
+highResDisplay = -1 // -1=automatic, 0=disabled, 1=enabled.
+noEdgesWhenMouseDownInCameraView = false // if true, rendering is faster during mouse/view interaction
+noTexturesWhenMouseDownInCameraView = false // if true, rendering is faster during mouse/view interaction
+noCustomUisWhenMouseDownInCameraView = true // if true, rendering is faster during mouse/view interaction
+
+
+// Visual
+// =================================================
+renderingSurfaceVShift = 0
+renderingSurfaceVResize = 0
+displayWorldRef = true
+antialiasing = false
+displayBoundingBoxeWhenObjectSelected = true
+guiFontSize_Win = 11
+guiFontSize_Mac = 10
+guiFontSize_Linux = 11
+allowTransparentDialogs = false
+dialogTransparencyFactor = 0.400000006
+statusbarInitiallyVisible = true
+modelBrowserInitiallyVisible = true
+sceneHierarchyInitiallyVisible = true
+scriptEditorFont =  // empty=default.
+scriptEditorFontSize = -1 // -1=default.
+auxConsoleFont =  // empty=default
+auxConsoleFontSize = -1 // -1=default.
+mainScriptColor_background = 190,175,175
+mainScriptColor_selection = 128,128,255
+mainScriptColor_comment = 0,140,0
+mainScriptColor_number = 220,0,220
+mainScriptColor_string = 255,255,0
+mainScriptColor_character = 255,255,0
+mainScriptColor_operator = 0,0,0
+mainScriptColor_preprocessor = 0,128,128
+mainScriptColor_identifier = 64,64,64
+mainScriptColor_word = 0,0,255
+mainScriptColor_word2 = 152,0,0
+mainScriptColor_word3 = 220,80,20
+mainScriptColor_word4 = 152,64,0
+nonThreadedChildScriptColor_background = 190,190,190
+nonThreadedChildScriptColor_selection = 128,128,255
+nonThreadedChildScriptColor_comment = 0,140,0
+nonThreadedChildScriptColor_number = 220,0,220
+nonThreadedChildScriptColor_string = 255,255,0
+nonThreadedChildScriptColor_character = 255,255,0
+nonThreadedChildScriptColor_operator = 0,0,0
+nonThreadedChildScriptColor_preprocessor = 0,128,128
+nonThreadedChildScriptColor_identifier = 64,64,64
+nonThreadedChildScriptColor_word = 0,0,255
+nonThreadedChildScriptColor_word2 = 152,0,0
+nonThreadedChildScriptColor_word3 = 220,80,20
+nonThreadedChildScriptColor_word4 = 152,64,0
+threadedChildScriptColor_background = 180,190,190
+threadedChildScriptColor_selection = 128,128,255
+threadedChildScriptColor_comment = 0,140,0
+threadedChildScriptColor_number = 220,0,220
+threadedChildScriptColor_string = 255,255,0
+threadedChildScriptColor_character = 255,255,0
+threadedChildScriptColor_operator = 0,0,0
+threadedChildScriptColor_preprocessor = 0,128,128
+threadedChildScriptColor_identifier = 64,64,64
+threadedChildScriptColor_word = 0,0,255
+threadedChildScriptColor_word2 = 152,0,0
+threadedChildScriptColor_word3 = 220,80,20
+threadedChildScriptColor_word4 = 152,64,0
+jointCallbackScriptColor_background = 190,190,190
+jointCallbackScriptColor_selection = 128,128,255
+jointCallbackScriptColor_comment = 0,140,0
+jointCallbackScriptColor_number = 220,0,220
+jointCallbackScriptColor_string = 255,255,0
+jointCallbackScriptColor_character = 255,255,0
+jointCallbackScriptColor_operator = 0,0,0
+jointCallbackScriptColor_preprocessor = 0,128,128
+jointCallbackScriptColor_identifier = 64,64,64
+jointCallbackScriptColor_word = 0,0,255
+jointCallbackScriptColor_word2 = 152,0,0
+jointCallbackScriptColor_word3 = 220,80,20
+jointCallbackScriptColor_word4 = 152,64,0
+contactCallbackScriptColor_background = 190,190,190
+contactCallbackScriptColor_selection = 128,128,255
+contactCallbackScriptColor_comment = 0,140,0
+contactCallbackScriptColor_number = 220,0,220
+contactCallbackScriptColor_string = 255,255,0
+contactCallbackScriptColor_character = 255,255,0
+contactCallbackScriptColor_operator = 0,0,0
+contactCallbackScriptColor_preprocessor = 0,128,128
+contactCallbackScriptColor_identifier = 64,64,64
+contactCallbackScriptColor_word = 0,0,255
+contactCallbackScriptColor_word2 = 152,0,0
+contactCallbackScriptColor_word3 = 220,80,20
+contactCallbackScriptColor_word4 = 152,64,0
+generalCallbackScriptColor_background = 190,190,190
+generalCallbackScriptColor_selection = 128,128,255
+generalCallbackScriptColor_comment = 0,140,0
+generalCallbackScriptColor_number = 220,0,220
+generalCallbackScriptColor_string = 255,255,0
+generalCallbackScriptColor_character = 255,255,0
+generalCallbackScriptColor_operator = 0,0,0
+generalCallbackScriptColor_preprocessor = 0,128,128
+generalCallbackScriptColor_identifier = 64,64,64
+generalCallbackScriptColor_word = 0,0,255
+generalCallbackScriptColor_word2 = 152,0,0
+generalCallbackScriptColor_word3 = 220,80,20
+generalCallbackScriptColor_word4 = 152,64,0
+customizationScriptColor_background = 150,150,150
+customizationScriptColor_selection = 128,128,255
+customizationScriptColor_comment = 0,120,0
+customizationScriptColor_number = 220,0,220
+customizationScriptColor_string = 205,205,0
+customizationScriptColor_character = 205,205,0
+customizationScriptColor_operator = 0,0,0
+customizationScriptColor_preprocessor = 0,128,128
+customizationScriptColor_identifier = 70,70,70
+customizationScriptColor_word = 0,0,255
+customizationScriptColor_word2 = 152,0,0
+customizationScriptColor_word3 = 220,80,20
+customizationScriptColor_word4 = 152,64,0
+addOnScriptColor_background = 240,240,240
+addOnScriptColor_selection = 128,128,255
+addOnScriptColor_comment = 0,164,0
+addOnScriptColor_number = 220,0,220
+addOnScriptColor_string = 205,205,0
+addOnScriptColor_character = 205,205,0
+addOnScriptColor_operator = 0,0,0
+addOnScriptColor_preprocessor = 0,128,128
+addOnScriptColor_identifier = 100,100,100
+addOnScriptColor_word = 0,0,255
+addOnScriptColor_word2 = 152,0,0
+addOnScriptColor_word3 = 220,80,20
+addOnScriptColor_word4 = 152,64,0
+
+
+// Directories
+// =================================================
+defaultDirectoryForScenes =  // absolute path, e.g. d:/myScenes (or leave empty for default path)
+defaultDirectoryForModels =  // absolute path, e.g. d:/myModels (or leave empty for default path)
+defaultDirectoryForCadFiles =  // absolute path, e.g. d:/myCadFiles (or leave empty for default path)
+defaultDirectoryForMiscFiles =  // absolute path, e.g. d:/myMiscFiles (or leave empty for default path)
+defaultDirectoryForExternalScriptEditor =  // absolute path, e.g. d:/myScriptTempFiles (or leave empty for default path)
+defaultDirectoryForRemoteApiFiles =  // absolute path, e.g. d:/myRemoteApiTransfers (or leave empty for default path)
+
+
+// Serialization
+// =================================================
+autoSaveDelay = 2 // in minutes. 0 to disable.
+doNotWritePersistentData = false
+compressFiles = true
+saveApproxNormals = true
+packIndices = true
+fileDialogs = -1 // recommended to keep -1 (-1=default, 0=native dialogs, 1=Qt dialogs).
+bulletSerializationBuffer = 10000000
+
+
+// Undo/Redo
+// =================================================
+undoRedoEnabled = true
+undoRedoOnlyPartialWithCameras = true
+undoRedoLevelCount = 16
+undoRedoMaxBufferSize = 80000000
+timeInMsForUndoRedoTooLongWarning = 200
+
+
+// Messaging
+// =================================================
+doNotShowOpenglSettingsMessage = false
+doNotShowCrashRecoveryMessage = false
+doNotShowUpdateCheckMessage = false
+doNotShowSceneSelectionThumbnails = false
+doNotShowProgressBars = false
+redirectStatusbarMsgToConsoleInHeadlessMode = false
+
+
+// Compatibility
+// =================================================
+middleMouseButtonSwitchesModes = false // has only an effect if navigationBackwardCompatibility is true.
+navigationBackwardCompatibility = false // recommended to keep false.
+colorAdjust_backCompatibility = 1 // recommended to keep 1.0
+specificGpuTweak = false
+
+
+// Floating license
+// =================================================
+floatingLicenseEnabled = false
+floatingLicenseServer = 127.0.0.1
+floatingLicensePort = 20249
+
+
+// Various
+// =================================================
+mouseWheelZoomFactor = 1
+dynamicActivityRange = 1000
+objectTranslationStepSize = 0.0250000004
+objectRotationStepSize = 5
+workThreadCount = 0 // -1, 0-256. (0 to disable, -1 for automatic setting (i.e. thread cnt=core cnt)).
+processorCoreAffinity = 0 // recommended to keep 0 (-1:os default, 0:all threads on same core, m: affinity mask (bit1=core1, bit2=core2, etc.))
+freeServerPortStart = 20000
+freeServerPortRange = 2000
+useExternalScriptEditor = false
+externalScriptEditor = c:/Program Files (x86)/Notepad++/notepad++
+abortScriptExecutionButton = 2 // in seconds. Zero to disable.
+triCountInOBB = 8
+removeIdenticalVertices = true
+identicalVerticesTolerance = 9.99999975e-05
+removeIdenticalTriangles = true
+triangleWindingCheck = true
+runCustomizationScripts = true
+test1 = false // recommended to keep false.
+orderHierarchyAlphabetically = false
+macChildDialogType = -1 // -1=default.
+useExternalLuaLibrary = false // if true, will call all Lua functions via the v_repLua library ('v_repLua.dll', 'libv_repLua.so' or 'libv_repLua.dylib')
