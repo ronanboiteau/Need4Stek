@@ -1,7 +1,5 @@
 # Need4Stek
 
-{EPITECH.} first year project.
-
 C artificial intelligence that guides an autonomous car through a virtual racetrack.
 
 <img alt="Need4Stek demo" src="/artwork/need4stek-demo.gif"/>
