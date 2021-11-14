@@ -42,9 +42,3 @@ Run this command from the root of the repository to run the simulation:
 ```
 
 Then you can go back to the V-REP window and you will see the car making its way through the racetrack using our artificial intelligence.
-
-## Authors
-
-* **Benjamin Dubus** ([GitHub](https://github.com/dubus-b))
-* **Ronan Boiteau** ([GitHub](https://github.com/ronanboiteau) / [LinkedIn](https://www.linkedin.com/in/ronanboiteau/))
-* **Sélim Rinaz** ([GitHub](https://github.com/rinaz-a) / [LinkedIn](https://www.linkedin.com/in/selim-rinaz/))
